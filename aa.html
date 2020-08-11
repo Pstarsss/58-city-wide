@@ -8,9 +8,31 @@
     </style>
 </head>
 <body>
-<div >
-
-
+<div id="fff">
+    <p></p>
+    <span></span>
+    <div id="biaoji">
+    </div>
+    <div class="ss">
+    </div>
 </div>
+<script type="text/javascript">
+      let fff = document.getElementById("fff");
+      let biao  = document.getElementById("biaoji");
+      let A = document.createElement("div");
+      function insertAfter(targetElement,newElement){
+            if(targetElement.parentNode){
+                var  parent = targetElement.parentNode;
+                    if(targetElement.nextSibling){
+                        parent.insertBefore(newElement,targetElement.nextSibling);
+                    }
+                    else{
+                       parent.appendChild(newElement);
+                    }
+            }
+      }
+
+
+</script>
 </body>
 </html>

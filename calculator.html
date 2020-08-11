@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>My_calculator</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            border:0;
+        }
+        ol, ul ,li{list-style: none;}
+        ul{
+            width: 257px;
+            height: 200px;
+        }
+        li{
+            line-height:40px;
+            float:left;
+            list-style:none;
+            border: 1px solid #9a9595;
+            width: 64px;
+            height: 40px;
+            text-align: center;
+            background-color: #fff;
+            box-sizing:border-box;
+            transition:all 0.3s;
+        }
+        input[type="text"] {
+            width: 252px;
+            height:24px;
+            text-align:right;
+        }
+        .wrapper{
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -90px;
+            margin-left: -133px;
+            text-align:center;
+            background-color: #e6e6d2;
+        }
+        .title {
+            display: flex;
+            justify-content: space-between;
+        }
+        li:hover{
+            background-color:#bbbbb1;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="title">
+        <span class="Cal">CALCULATORS</span>
+        <span class="Chui">随便锤</span>
+    </div>
+    <input type="text" name="result" value="0" placeholder="0" />
+    <div id="Pre"> </div>
+    <ul>
+        <li>%</li>
+        <li>C</li>
+        <li>DEL</li>
+        <li>/</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>X</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>-</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>+</li>
+        <li>?</li>
+        <li>0</li>
+        <li>.</li>
+        <li>=</li>
+    </ul>
+</div>
+
+    <script type="text/javascript">
+         let Pre = document.getElementById("Pre");
+         let results = document.getElementsByName("result")[0];
+         let ul = document.getElementsByTagName("ul")[0];
+         let firsts = "";
+         let second = "";
+         let operator = "";
+         let count = 0;
+         let temp = false;
+         ul.addEventListener("click",function(e){
+                let E = window.event || e;
+                let targetElement = E.target || E.srcElement;
+                let Con = targetElement.innerText;
+                if(Con === "DEL"){
+                    results.value = dele(results.value);
+                    return ;
+                }
+                if(Con === "C"){
+                    results.value = "";
+                    clear();
+                }
+                if(Con === "="){
+                    firsts = parseFloat(firsts);
+                    second = parseFloat(second);
+                    switch (operator){
+                        case "+": results.value = firsts + second;break;
+                        case "-": results.value = firsts - second;break;
+                        case "/": results.value = firsts / second;break;
+                        case "X": results.value = firsts * second;break;
+                        case "%": results.value = firsts % second;break;
+                    }
+                    clear();
+                }
+                if(Con == "?"){
+                    return ;
+                }
+
+                if(Con === "+" || Con === "-" || Con === "X" || Con === "/" || Con ==="%"){
+                    operator = Con;
+                    temp = true;
+                    results.value = "";
+                    Pre.innerText = firsts;
+                    return;
+                }
+                if(!temp){
+                    firsts += Con;
+                    results.value = firsts;
+                }
+                else{
+                    second += Con;
+                    results.value = second;
+                }
+
+                function clear(){
+                    Pre.innerText = "";
+                    firsts = "";
+                    second = "";
+                    return;
+                }
+                function dele(NUM){
+                    let temps = [];
+                    if(NUM){
+                        temps = [...NUM];
+                        temps.length -= 1;
+                        return temps.join("");
+                    }
+                    else{
+                        return NUM;
+                    }
+                }
+            });
+    </script>
+</body>
+</html>
