@@ -1,0 +1,147 @@
+@charset "UTF-8";
+/**
+ *
+ * @authors Marte (iqianduan@126.com)
+ * @date    2020-08-12 19:34:51
+ * @version $Id$
+ */
+html{
+    font-size:41.4px;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+img{
+    border:0;
+}
+ol, ul ,li{list-style: none;}
+a{
+    text-decoration:none;
+}
+.placeholderBar {
+    width: 100%;
+    background-color: #fbf7f7;
+    height: 0.5rem;
+}
+header.header {
+    position: relative;
+    font-size: 0.3rem;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background-image: url("../img/publish/top5_inner.png");
+    height:100%;
+    box-sizing:border-box;
+}
+.header_left{
+    display:flex;
+    align-items:center;
+    position: relative;
+    padding-left: 0.15rem;
+}
+.header_left img{
+    padding-right:0.2rem;
+    width: 0.6rem;
+}
+a.numbers{
+    color:#fff;
+    font-size: 0.5rem;
+    font-weight: 600;
+}
+.special1{
+    position: absolute;
+    top: -27%;
+    left: 81%;
+    font-size: 0.7rem !important;
+}
+.header_right{
+    display:flex;
+}
+.header_right span{
+    font-size: 0.18rem;
+}
+#SP{
+    font-size:0.35rem;
+    position: relative;
+}
+#SP::after{
+    content: "";
+    position: absolute;
+    top: 27%;
+    right: -49%;
+    transform: rotate(90deg);
+    border: 6px solid;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-right-width: 0px;
+}
+.spirits > div{
+    background-image: url(../img/publish/top.btn.0624.png);
+    display: block;
+    height:100%;
+    background-size: 100%;
+}
+.denglu_logo > div{
+    background-position-y:0.49rem;
+}
+.zuche,.denglu{
+    padding: 0 0.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+}
+.zuche_logo,.denglu_logo{
+    padding: 0.1rem 0.05rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    overflow: hidden;
+    display: block;
+}
+.first_page{
+    background: #eee;
+    border-bottom: 1px solid #E3E3E3;
+    color: #aaa ;
+    font-size: 0.32rem;
+}
+.first_page_P{s
+    color: #6e6e6e;
+}
+.first_page_wrapper span{
+    padding: 0 0.05rem;
+}
+.first_page_wrapper {
+    height: 1rem;
+    padding-left: 0.2rem;
+    line-height: 1rem;
+}
+.slide {
+    padding: 0 0.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+.slide span{
+    font-size:0.4rem;
+}
+h2{
+    font-size:0.4rem;
+}
+.slide_Plogo{
+    transform: scale(1.6,1.7);
+    display: block;
+    background-image: url(../img/publish/mpnew_bg.png);
+    width: 0.5rem;
+    height: 0.4rem;
+    background-size: 312%;
+}
+.left_slide {
+
+    height: 100%;
+}
+.middle_slide{
+    flex-grow:1;
+}
