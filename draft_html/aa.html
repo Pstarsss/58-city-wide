@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+<div id="fff">
+    <p></p>
+    <span></span>
+    <div id="biaoji">
+    </div>
+    <div class="ss">
+    </div>
+</div>
+<script type="text/javascript">
+
+
+      // let fff = document.getElementById("fff");
+      // let biao  = document.getElementById("biaoji");
+      // let A = document.createElement("div");
+
+      // let dd = "";
+      // function qudouhao(str){
+      //     dd = str;
+      //     if(!dd.indexOf(",")){
+      //       return dd;
+      //     }
+      //     else{
+      //       dd = str.replace(",","");
+      //       return  qudouhao(dd);
+      //     }
+      // }
+      // let cc = "1312,444,67,7,8,9";
+      // let aa = qudouhao(cc);
+      //
+       let arr = [];
+
+       function searchstr(parentstr,str){
+            let len = str.length;
+            let temp = 0;
+            let arr = [];
+            let flag = true;
+            while(flag){
+                let j = parentstr.indexOf(str,temp)
+                arr.push(j);
+                temp +=len;
+                if(j == parentstr.lastIndexOf(str)){
+                  flag = false;
+                }
+            }
+            return arr;
+       }
+       function two(text){
+          let arr = text.split(" ");
+          let len = arr.length;
+          for(let i in arr){
+              arr[i] = arr[i].replace(arr[i].charAt(0),arr[i].charAt(0).toUpperCase());
+          }
+          return arr.join(" ");
+       }
+
+       function three(str){
+          let arr = {};
+          let i = 0;
+          let temp = [...str];
+          for(let j in temp){
+              if(!arr[temp[j]]){
+                arr[temp[j]] = 1;
+              }
+              arr[temp[j]] +=1;
+          }
+          return arr;
+       }
+</script>
+</body>
+</html>
