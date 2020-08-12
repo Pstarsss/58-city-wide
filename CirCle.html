@@ -66,11 +66,11 @@
         let count = 0;
         let ll = box2.style.left;
         setInterval(function(){
-                if(box2.style.left&&count<6){
+                if(box2.style.left&&count<=5){
                     box2.style.left = (parseInt(box2.style.left) - 320) + "px";
                 }
                 else{
-                    box2.style.left = 0 + "px";
+                    box2.style.left = -0 + "px";
                     count = 0
                 }
                 count++;

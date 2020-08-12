@@ -1,0 +1,162 @@
+@charset "UTF-8";
+/**
+ *
+ * @authors Marte (iqianduan@126.com)
+ * @date    2020-08-12 09:37:00
+ * @version $Id$
+ */
+html{
+    font-size:41.4px;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+img{
+    border:0;
+}
+ol, ul ,li{list-style: none;}
+a{
+    text-decoration:none;
+}
+header.header {
+    position: relative;
+    font-size: 0.3rem;
+    color: #fff;
+    padding: 0.4rem 0.4rem;
+    display: flex;
+    background-color: #f55a21;
+    height: 2.5rem;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.header_left{
+    position: relative;
+}
+a.numbers{
+    color:#fff;
+    font-size: 0.5rem;
+    font-weight: 600;
+}
+.special1{
+    position: absolute;
+    top: -8%;
+    left: 81%;
+    font-size: 0.7rem !important;
+}
+.header_right span{
+    font-size: 0.4rem;
+}
+.Login{
+    flex-direction: column;
+    display: flex;
+    position: absolute;
+    top: 7%;
+    left: 41%;
+    align-items: center;
+}
+.Login > a:first-child{
+    width: 2.2rem;
+    overflow: hidden;
+    text-align: center;
+    color: #fff;
+    height: 2.2rem;
+    background-color: #dcdce6;
+    border: 3px double #ffffff;
+    border-radius: 50%;
+    line-height: 2.2rem;
+}
+.Login > a:first-child > img{
+    width: 2rem;
+    height:2.2rem;
+}
+.login_dd{
+    color: #f40;
+    font-size: 0.4rem;
+    border: 1px solid #f40;
+    padding: 0.1rem 0.4rem;
+}
+.Login > a{
+    line-height:1rem;
+}
+.message_choice {
+    margin-top: 3.2rem;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.3rem;
+}
+.choice_P{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+.choice_P > span{
+    font-size: 0.32rem;
+}
+.choice_P > img{
+    padding-bottom: 0.25rem;
+    width: 0.7rem;
+}
+.placeholderBar {
+    width: 100%;
+    background-color: #fbf7f7;
+    height: 0.32rem;
+}
+.special_oper img{
+    width: 0.5rem;
+    padding-right: 0.45rem;
+}
+.special_oper > ul > li span{
+    font-size:0.32rem;
+}
+.special_oper > ul li{
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0.5rem 0 0.5rem 0.8rem;
+}
+a.details_dd {
+    display: flex;
+    align-items: center;
+}
+.FIX{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #181515e8;
+    width: 100%;
+    height: 1.1rem;
+}
+.FIX_wrapper{
+    color:#c0b5b5;
+    width: 96%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    height:100%;
+}
+.left_fix img{
+    width: 0.7rem;
+}
+.left_fix span{
+    font-size: 0.1rem;
+    padding-left: 0.3rem;
+}
+.right_fix > span{
+    color: #fff;
+    font-size: 0.3rem;
+    padding: 0.1rem 0.1rem;
+    border: 1px solid #f40;
+    background-color: #f40;
+}
+.right_fix > img{
+        padding-left: 0.3rem;
+    width: 0.25rem
+}
+.fixs{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}

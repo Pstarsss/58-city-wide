@@ -12,6 +12,9 @@
 img{
     border:0;
 }
+a{
+    text-decoration: none;
+}
 ol, ul ,li{list-style: none;}
 .clearfix:before,.clearfix:after{
     clear:both;
@@ -471,7 +474,8 @@ ul.zp_list_1 {
     background: url("../img/index1/logo.png");
 }
 .backTop{
-        line-height: 0.7rem;
+    display:none;
+    line-height: 0.7rem;
     position: fixed;
     bottom: 10%;
     right: 3%;
